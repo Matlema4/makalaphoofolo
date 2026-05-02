@@ -16,7 +16,7 @@ MakalaPhoofolo Projects & Services is a dynamic firm that empowers businesses wi
 
 | File | Description |
 |------|-------------|
-| `makalaphoofolo.html` | Main website — single-page HTML site |
+| `index.html` | Main website — single-page HTML site |
 | `makala_logo.png` | Primary company logo (gold MP monogram on black) |
 | `otherlogos.png` | Regulatory affiliations banner (SARS, CIPC, CIDB, COIDA) |
 
