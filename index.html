@@ -330,12 +330,41 @@
   .footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
   .footer-links a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s}
   .footer-links a:hover{color:var(--gold)}
-  .affiliations{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem}
-  .affil-badge{
-    background:rgba(201,168,76,.1);border:1px solid var(--border);
-    border-radius:6px;padding:.35rem .7rem;font-size:.72rem;
-    font-weight:600;color:var(--gold);letter-spacing:.08em;
+
+  /* ─── AFFILIATION LOGOS ─── */
+  .affiliations{
+    display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem;align-items:center;
   }
+  .affil-logo-card{
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--border);
+    border-radius:10px;
+    width:72px;
+    height:72px;
+    padding:.6rem;
+    transition:border-color .25s, background .25s, transform .2s, box-shadow .25s;
+    cursor:default;
+    flex-shrink:0;
+  }
+  .affil-logo-card:hover{
+    border-color:var(--gold);
+    background:rgba(201,168,76,.1);
+    transform:translateY(-3px);
+    box-shadow:0 6px 20px rgba(201,168,76,.15);
+  }
+  .affil-logo-card img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    opacity:.85;
+    transition:opacity .25s, transform .25s;
+  }
+  .affil-logo-card:hover img{
+    opacity:1;
+    transform:scale(1.05);
+  }
+
   .footer-bottom{
     max-width:1100px;margin:2rem auto 0;
     display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
@@ -599,8 +628,27 @@
     <div>
       <div class="footer-brand">MakalaPhoofolo Projects &amp; Services</div>
       <p class="footer-tagline">"Building Businesses. Solving Problems. Delivering Results."<br><br>Your trusted partner for financial compliance and digital growth in South Africa.</p>
-      <div class="affiliations">
-        <img src="otherlogos.png" alt="SARS · CIPC · CIDB · COIDA" style="width:100%;max-width:340px;height:auto;display:block;border-radius:10px;margin-top:.5rem;" />
+
+      <!-- AFFILIATION LOGOS — replace otherlogos.png -->
+      <div style="margin-top:.6rem">
+        <div style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.7rem;">Registered &amp; Affiliated With</div>
+        <div class="affiliations">
+          <div class="affil-logo-card" title="South African Revenue Service">
+            <img src="sars-logo.png" alt="SARS" />
+          </div>
+          <div class="affil-logo-card" title="Companies and Intellectual Property Commission">
+            <img src="cipc-logo.png" alt="CIPC" />
+          </div>
+          <div class="affil-logo-card" title="Construction Industry Development Board">
+            <img src="cidb-logo.png" alt="CIDB" />
+          </div>
+          <div class="affil-logo-card" title="Compensation for Occupational Injuries and Diseases">
+            <img src="coida-logo.png" alt="COIDA" />
+          </div>
+          <div class="affil-logo-card" title="Affiliated Partner">
+            <img src="partner-logo.png" alt="Partner" />
+          </div>
+        </div>
       </div>
     </div>
     <div>
